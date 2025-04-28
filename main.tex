@@ -1,0 +1,470 @@
+\documentclass{article}
+\usepackage{graphicx} 
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{siunitx}
+\usepackage{cancel}
+\usepackage{changepage}
+\usepackage{placeins}
+\usepackage{enumitem}
+\usepackage{siunitx}
+\usepackage{lipsum}
+\usepackage[most]{tcolorbox}
+\definecolor{light-gray}{gray}{0.9}
+\newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
+\usepackage{subcaption}
+
+
+
+%\usepackage{times}
+%\usepackage{mathpazo}
+\usepackage{tgtermes}
+
+\DeclareSIUnit{\atm}{atm}
+
+\usepackage{tabularx}
+\usepackage{amsmath, amssymb, amscd, MnSymbol, mathrsfs}
+\usepackage{cellspace}
+\usepackage{tikz}
+\usetikzlibrary{calc,3d, patterns, angles, quotes, decorations.markings, decorations.pathmorphing, hobby}
+\usepackage{xfrac}
+
+\usepackage{chemfig}
+\usepackage{caption}
+\usepackage{bm}
+
+\usepackage{pdfpages}
+\usepackage{pdflscape}
+\usepackage{afterpage}
+
+\usepackage{empheq}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{xstring}
+
+\pgfplotsset{compat=1.18}
+
+
+\usepackage[european,americanvoltages,americanresistors,cuteinductors,fetbodydiode]{circuitikz}
+\usetikzlibrary{circuits.logic.US}
+\usepackage{siunitx}
+\usetikzlibrary{arrows,shapes,calc, positioning, patterns, decorations, decorations.markings}
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+%\ctikzset{bipoles/thickness=1}
+%\tikzstyle{every node}=[font=\small]
+%\tikzstyle{every path}=[line width=0.8pt,line cap=round,line join=round]
+
+\def\CalcC#1{%
+	\coordinate (base) at (#1.base);
+	\coordinate (collector) at (#1.collector);
+	\coordinate (emitter) at (#1.emitter);
+	\draw (barycentric cs:base=0.5,collector=0.5,emitter=0.5) circle [radius=14pt];
+}
+
+\usepackage{tikz-3dplot}
+\usepackage{textcomp}
+% Custom commands
+\newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+%\usetikzlibrary{external}
+%\tikzexternalize[prefix=figures/]
+
+\newcommand\myfrac[2]{\sfrac{#1\mkern-1.2mu}{#2}}
+\usepackage{xcolor}
+
+% Define custom colors
+\definecolor{darkblue}{rgb}{0.1,0.1,0.5} %  dark blue shade
+\definecolor{formalshade}{rgb}{0.95,0.95,1} % light blue shade for the background
+
+% For the adjustwidth environment
+\PassOptionsToPackage{strict}{changepage}
+\usepackage{changepage}
+
+% For formal definitions
+\usepackage{framed}
+
+\newcommand{\formalsource}{} % Initialize an empty macro to store the source text
+
+\newenvironment{formal}[3][]{% Start of the environment
+	\renewcommand{\formalsource}{#1}% Store the optional argument
+	\def\FrameCommand{%
+		\hspace{1pt}%
+		{\color{#2}\vrule width 2pt}%
+		{\color{#3}\vrule width 4pt}%
+		\colorbox{#3}%
+	}%
+	\MakeFramed{\advance\hsize-\width\FrameRestore}%
+	\noindent\hspace{-4.55pt}% Disable indenting the first paragraph
+	\begin{adjustwidth}{}{7pt}%
+		\vspace{2pt}%
+	}%
+	{%
+		\vspace{4pt}%
+		\ifx\formalsource\empty % Check if the source is empty
+		\else
+		\hfill{\footnotesize{\formalsource}}% Align source to the bottom-right
+		\fi
+	\end{adjustwidth}\endMakeFramed%
+}
+
+
+% Custom itemize list with images for positive and negative items
+\newlist{gitemize}{itemize}{1} % Just one level for the list
+\setlist[gitemize,1]{
+	leftmargin=2.8em, % Adjust the margin for the list
+	labelsep=1em % Control the space between the label and the list item
+}
+
+\newcommand{\checkitem}{\raisebox{-0.25\height}{\includegraphics[width=0.4cm]{checkmark.png}}}
+\newcommand{\crossitem}{\raisebox{-0.25\height}{\includegraphics[width=0.4cm]{cross.png}}}
+
+
+\usepackage[left=0.8in,right=0.8in,top=0.5in,bottom=0.6in,includeheadfoot,letterpaper]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tabularray}
+\usepackage{varwidth} 
+
+\usepackage{mathtools}
+\usepackage{scalerel}
+%\usepackage{showframe}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{Page \thepage}
+\setlength{\headheight}{30pt}
+\setlength{\footskip}{20pt}
+
+%\fancypagestyle{plain}{
+	%    \fancyhf{} % Clear all header and footer fields for plain style
+	%    \fancyhead[L]{\includegraphics[height=1.2cm]{images/Kingston_University_London_logo_200-tablet.png}} % Left header
+	%    \fancyhead[R]{EG4019 - ME - Engineering Mechanics and Materials} % Right header
+	%    \fancyfoot[C]{Department of Mechanical Engineering} % Center footer
+	%    \fancyfoot[R]{\thepage} % Right footer (page number)
+	%}
+
+
+
+\newcommand{\wm}[2]{%
+	\begin{minipage}{#1\textwidth}
+		\centering
+		#2
+	\end{minipage}%
+}
+
+
+\usepackage{scalerel}
+\usepackage{pythonhighlight}
+\setlength{\headheight}{30pt}
+\setlength{\footskip}{20pt}
+
+
+
+\usepackage[export]{adjustbox}
+\usepackage{tocloft}
+\renewcommand{\cfttoctitlefont}{}
+\renewcommand{\contentsname}{}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\setlength{\cftbeforesecskip}{0.5em}
+
+
+
+\usepackage{hyperref}    % For hyperlinks
+\usepackage{xurl}        % For better URL handling
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue!50!black,
+	urlcolor=blue,       % Color for URLs
+}
+
+
+\definecolor{ChineseGold}{HTML}{C59401}
+\definecolor{AmericanGold}{HTML}{D3AF37}
+\definecolor{MetallicSunburst}{HTML}{A77C37}
+\definecolor{GoldenBrown}{HTML}{996515}
+\definecolor{DarkBrown}{HTML}{674222}
+\definecolor{SkyBlue}{HTML}{87CEEB}      % Soft and bright
+\definecolor{BabyBlue}{HTML}{89CFF0}     % Gentle, pastel-like
+\definecolor{SteelBlue}{HTML}{4682B4}    % Rich but not overpowering
+\definecolor{RoyalBlue}{HTML}{4169E1}    % Strong, slightly purplish
+\definecolor{MidnightBlue}{HTML}{191970} % Almost black, deep navy
+\definecolor{PrussianBlue}{HTML}{003153} % Very deep blue with a classic look
+\definecolor{mainblue}{HTML}{1D73BE}
+
+\usepackage{listings}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{white!97!gray},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{purple},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{orange},
+	basicstyle=\ttfamily\scriptsize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+%Refer to the equation as \eqref{equation}.
+\usepackage{caption}  % This package allows captioning outside of a float
+\usepackage[export]{adjustbox}
+
+
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{patterns.meta}
+\usepackage[para]{footmisc} % Example of making footnotes run together in a paragraph
+
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+
+\usepackage{datetime}
+
+\usepackage{etoolbox}
+\AfterEndEnvironment{landscape}{\clearpage\restoregeometry}
+
+\makeatletter
+\def\tagform@#1{\maketag@@@{{Eq.~#1}}} 
+\makeatother
+
+\usepackage{ifthen}
+\usepackage{calc}
+\usepackage{datenumber}
+
+\usepackage{physics}
+\usepackage[outline]{contour}
+\usepackage{shapepar,transparent}
+\usetikzlibrary{patterns,decorations.pathmorphing}
+\usetikzlibrary{arrows.meta}
+\tikzset{>=latex}
+\contourlength{1.1pt}
+
+\colorlet{mydarkblue}{blue!50!black}
+\colorlet{myred}{red!65!black}
+\colorlet{watercol}{blue!80!cyan!10!white}
+\colorlet{darkwatercol}{blue!80!cyan!20!white}
+\tikzstyle{piston}=[blue!50!black,top color=blue!30,bottom color=blue!50,middle color=blue!20,shading angle=0]
+\tikzstyle{water}=[draw=mydarkblue,top color=watercol!90,bottom color=watercol!90!black,shading angle=5]
+\tikzstyle{vertical water}=[water,
+top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=watercol!80,shading angle=90]
+\def\tick#1#2{\draw[thick] (#1)++(#2:0.1) --++ (#2-180:0.2)}
+
+
+\newcounter{deadlineyear}\setcounter{deadlineyear}{2025}
+\newcounter{deadlinemonth}\setcounter{deadlinemonth}{5} % May is the 5th month
+\newcounter{deadlineday}\setcounter{deadlineday}{6}
+\newcounter{deadlinetime}\setcounter{deadlinetime}{0} % Start at midnight (00:00)
+
+\newcounter{mydatenumber}
+\newcounter{currentdate}
+\newcounter{daysdiff}
+\newcounter{currenttime}
+\newcounter{totalminutes}
+\newcounter{displaydays}
+\newcounter{remainingmins}
+\newcounter{displayhours}
+\newcounter{displaymins}
+
+% ====== MACROS ======
+% Set deadline time (e.g., \setdeadlinetime{23}{59})
+\newcommand{\setdeadlinetime}[2]{%
+	\setcounter{deadlinetime}{#1 * 60 + #2}%
+}
+
+% Main calculation command
+\newcommand{\timeUntilDeadline}{%
+	% Calculate days between dates
+	\setmydatenumber{mydatenumber}{\thedeadlineyear}{\thedeadlinemonth}{\thedeadlineday}%
+	\setmydatenumber{currentdate}{\the\year}{\the\month}{\the\day}%
+	\setcounter{daysdiff}{\themydatenumber - \thecurrentdate}%
+	% Get current time in minutes since midnight
+	\setcounter{currenttime}{\time}%
+	% Calculate total remaining minutes (deadline time - current time)
+	\setcounter{totalminutes}{\thedaysdiff * 1440 + \thedeadlinetime - \thecurrenttime}%
+	% Check deadline status
+	\ifnum\thetotalminutes < 0
+	\textbf{\color{red}Deadline passed!}%
+	\else
+	% Calculate time components
+	\setcounter{displaydays}{\thetotalminutes / 1440}%
+	\setcounter{remainingmins}{\thetotalminutes - \thedisplaydays * 1440}%
+	\setcounter{displayhours}{\theremainingmins / 60}%
+	\setcounter{displaymins}{\theremainingmins - \thedisplayhours * 60}%
+	% Format output
+	\textbf{%
+		\ifnum\thedisplaydays > 0
+		\thedisplaydays\ day\ifnum\thedisplaydays > 1 s\fi%
+		\ifnum\thedisplayhours > 0
+		\ifnum\thedisplaymins > 0, \else\ and \fi%
+		\else
+		\ifnum\thedisplaymins > 0\ and \fi%
+		\fi%
+		\fi%
+		\ifnum\thedisplayhours > 0
+		\thedisplayhours\ hour\ifnum\thedisplayhours > 1 s\fi%
+		\ifnum\thedisplaymins > 0\ and \fi%
+		\fi%
+		\ifnum\thedisplaymins > 0
+		\thedisplaymins\ minute\ifnum\thedisplaymins > 1 s\fi%
+		\fi%
+	}%
+	\fi
+}
+
+% New macro for deciding the appropriate unit (Days, Hours, Minutes)
+\newcommand{\leftamount}{%
+	% Check if days are greater than 1 day
+	\ifnum\thedisplaydays > 1
+	\text{Days}
+	% If more than 1 hour but less than 24 hours
+	\else\ifnum\thedisplayhours > 0
+	\text{Hours}
+	% If less than an hour
+	\else
+	\text{Minutes}
+	\fi\fi
+}
+
+
+
+\definecolor{mygreen}{HTML}{07a56d}
+
+\newtcbtheorem{briefillus}{Definiton}{
+	enhanced,
+	sharp corners,
+	attach boxed title to top left={
+		xshift=0pt, 
+		yshift=-\tcboxedtitleheight, 
+		yshifttext=-\tcboxedtitleheight/2-0.5em
+	},
+	colback=white,
+	colframe=black,
+	fonttitle=\bfseries,
+	coltitle=white,
+	boxed title style={
+		rounded corners,
+		arc=2pt,
+		size=small,
+		colback=black,
+		colframe=black,
+	},
+	leftrule=0pt, 
+	rightrule=0pt, 
+}{thm}
+
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}[block]{\huge}{\thesection}{1em}{}
+\titleformat{\subsection}[block]{\large}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[block]{}{\thesubsubsection}{1em}{}
+
+
+\begin{document}
+\thispagestyle{empty}
+\vspace*{10em}
+
+\Huge \noindent 
+Sustainability Assessment of \color{green!50!black}Perovskite\\ Solar Cells \\[1em]
+\color{black}
+\normalsize \textit{Application for Emergency Shelters}\\
+\vspace*{4em}
+
+\noindent \large Karolina Rydzik
+
+\vspace*{\fill}
+
+\normalsize
+\hspace*{-2.9em}
+\begin{tabular}{@{}l l@{}}
+	& Deadline: Tuesday 6$^{\text{th}}$ May, 2025\\
+	& Last Updated: \today\, \currenttime \\
+	& Days left until deadline: \timeUntilDeadline \\
+\end{tabular}
+
+	\newpage\thispagestyle{empty}
+	
+	\begin{abstract} 
+		Concise summary of objectives, methods, key findings, and conclusions.
+	\end{abstract}
+	
+	\newpage\pagenumbering{gobble}
+	
+	\noindent
+	
+	\huge Table of Contents\\
+	
+	\normalsize
+	
+	{
+		\hypersetup{linkcolor=black}
+		\tableofcontents
+	}    
+
+
+	\thispagestyle{empty}
+
+	{
+		\hypersetup{linkcolor=black}
+		\pagenumbering{gobble}
+		\tableofcontents
+	}    
+	
+	
+	\newpage\newgeometry{left=0.8in,right=0.8in,top=1in,bottom=0.3in}
+	\noindent\pagenumbering{arabic}\setcounter{page}{1}
+
+
+\section{Introduction}
+This study conducts a comprehensive sustainability assessment of emergency shelter tents\footnote{An emergency shelter tent is a portable structure, often lightweight and easy to set up, designed to provide temporary protection from the elements in emergency situations. It offers a safe and sheltered space, especially in scenarios where traditional housing is unavailable or inadequate, as noted by\\ Gala Tent (2024) and ICBrindle (2022)}, examining their environmental footprint, economic viability, socio-environmental trade-offs, and social implications. Focusing on energy systems, we analyze and compare the most widely-used shelter technologies in disaster response scenarios.
+
+\subsection{Product Selection and Justification}
+This assessment compares three distinct emergency shelter power solutions:
+	\begin{itemize}
+		\item \textbf{Perovskite-integrated shelters}: The primary focus, representing an emerging technology with potential advantages in efficiency and manufacturing cost compared to conventional options.
+		\item \textbf{Silicon solar-equipped shelters}: Serving as the baseline renewable alternative, with established performance data and widespread deployment in field operations.
+		\item \textbf{Diesel generator systems}: Representing conventional power solutions for shelters in grid-independent scenarios, despite their known environmental drawbacks.
+	\end{itemize}
+The selection encompasses both mature and emerging technologies to provide a balanced perspective on sustainability trade-offs in disaster response applications.\\[8pt]
+By comparing perovskite-integrated shelters with traditional options, this work seeks to evaluate the potential benefits and trade-offs in their use during disaster response scenarios.
+
+% Additional sections would follow here...
+
+\newpage
+
+text
+
+\newpage
+
+\section{References}
+\normalsize
+\begin{enumerate}
+\item GalaTent (2024). \textit{Emergency Medical Tents and Shelters}. [online] Available at: \url{https://www.galatent.co.uk/uses/emergency-medical-tents-and-shelters}.
+\item ICBrindle (2022). \textit{Rapid Deployment Inflatable Emergency Shelters}. [online] Available at: \url{https://icbrindle.com/rapid-response-inflatable-shelters/inflatable-emergency-shelters-tents.html}.
+
+\end{enumerate}
+	
+\end{document}
