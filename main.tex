@@ -86,12 +86,13 @@
 \usepackage{changepage}
 
 % For formal definitions
+
 \usepackage{framed}
+\newcommand{\formalsource}{}
 
-\newcommand{\formalsource}{} % Initialize an empty macro to store the source text
-
-\newenvironment{formal}[3][]{% Start of the environment
-	\renewcommand{\formalsource}{#1}% Store the optional argument
+\newenvironment{formal}[3][]{	\renewcommand{\formalsource}{#1}
+	\def\lefty{\color{#2}\textquotedblleft}
+	\def\righty{\color{#2}\textquotedblright}
 	\def\FrameCommand{%
 		\hspace{1pt}%
 		{\color{#2}\vrule width 2pt}%
@@ -99,17 +100,16 @@
 		\colorbox{#3}%
 	}%
 	\MakeFramed{\advance\hsize-\width\FrameRestore}%
-	\noindent\hspace{-4.55pt}% Disable indenting the first paragraph
-	\begin{adjustwidth}{}{7pt}%
-		\vspace{2pt}%
-	}%
-	{%
-		\vspace{4pt}%
-		\ifx\formalsource\empty % Check if the source is empty
-		\else
-		\hfill{\footnotesize{\formalsource}}% Align source to the bottom-right
-		\fi
-	\end{adjustwidth}\endMakeFramed%
+    \begin{adjustwidth}{5pt}{7pt}%
+	\vspace{4pt}%
+	\ifx#2\empty\else\smash{\raisebox{-0.5em}{\huge\lefty}}\hspace{0em}\fi%
+	}{%
+	\hspace{0em}\smash{\raisebox{-0.5em}{\huge\righty}}\\%
+	\vspace{0pt}%
+	\ifx\formalsource\empty\else\hfill{\footnotesize\textit{\formalsource}}\fi%
+\end{adjustwidth}%
+\endMakeFramed%
+\noindent%
 }
 
 
@@ -379,14 +379,15 @@ top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=wa
 \titleformat{\subsection}[block]{\large}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}[block]{}{\thesubsubsection}{1em}{}
 
+%\usepackage{darkmode}
+%\enabledarkmode
 
 \begin{document}
 \thispagestyle{empty}
 \vspace*{10em}
 
 \Huge \noindent 
-Sustainability Assessment of \color{green!50!black}Perovskite\\ Solar Cells \\[1em]
-\color{black}
+Sustainability Assessment of \textcolor{green!50!black}{Perovskite\\ Solar Cells}\\[1em]
 \normalsize \textit{Application for Emergency Shelters}\\
 \vspace*{4em}
 
@@ -435,6 +436,8 @@ Sustainability Assessment of \color{green!50!black}Perovskite\\ Solar Cells \\[1
 	\noindent\pagenumbering{arabic}\setcounter{page}{1}
 
 
+
+
 \section{Introduction}
 
 This study conducts a comprehensive sustainability assessment of emergency shelter tents\footnote{An emergency shelter tent is a portable structure, often lightweight and easy to set up, designed to provide temporary protection from the elements in emergency situations. It offers a safe and sheltered space, especially in scenarios where traditional housing is unavailable or inadequate, as noted by Gala Tent (2024) and ICBrindle (2022)}, examining their environmental impact, economic feasibility, social consequences, and socio-environmental trade-offs. Rather than addressing shelters in a broad sense, the focus is specifically on common types of emergency shelter technologies and the energy systems that support them.\\[8pt]	
@@ -449,14 +452,31 @@ This selection encompasses both mature and emerging technologies to provide a ba
 The primary objective is to compare these power options to understand their implications for both sustainability goals and disaster relief efforts.
 
 \newpage
-
 \section{Environmental Assessment}
-- Selection of environmental indicator\\
-- Following LCA method (goal and scope, inventory, impact assessment, interpretation)\\
-- Data collection (well referenced, data quality, robust assumptions made) for the inventory\\
-- Estimating total emissions (impact assessment)\\
-- Identify largest emissions and key sources (hotspot analysis)
 
+Briefly introduce the concept of what an Environmental Assessment is.
+\begin{formal}[Wikipedia, 2025]{green!50!black}{white}
+	Environmental Impact Assessment (EIA) evaluates the environmental consequences of plans, policies, or projects before decisions are made. EIA applies to projects, while Strategic Environmental Assessment (SEA) applies to policies and plans. It is a tool for decision-making, often involving public participation and legal review. The goal is to ensure environmental impacts are considered before proceeding. The International Association for Impact Assessment (IAIA) defines EIA as identifying, predicting, evaluating, and mitigating the effects of development proposals before major decisions are made, requiring justification based on environmental studies and public input.
+\end{formal}
+Relevance/Relation: Mention the importance of assessing environmental impacts for your chosen shelter technologies.
+\subsection{Selection of Environmental Indicator(s)}
+Define which environmental indicators you will be assessing (e.g., carbon emissions, energy use, water consumption).\\
+Justify why these indicators are relevant to your product comparison.
+\subsection{Goal and Scope Definition (LCA)}
+Goal: Explain the purpose of the environmental assessment. For example, “To compare the environmental impacts of perovskite-integrated shelters, silicon solar-equipped shelters, and diesel generators.”\\[8pt]
+Scope: Define the boundaries of the assessment (e.g., cradle-to-grave or gate-to-gate, life cycle stages considered, cut-off points for data).
+\subsection{Inventory Data Collection}
+Discuss the data collected for each product’s life cycle stages (production, use, disposal).\\[8pt]
+Include information on environmental inputs/outputs, energy requirements, and waste.\\[8pt]
+Mention data sources, assumptions, and limitations where applicable.
+\subsection{Impact Assessment}
+Explain how emissions and other environmental impacts are assessed and quantified.\\[8pt]
+Use tools like CO2 equivalents to estimate climate change impacts.\\[8pt]
+Present data showing emissions for each shelter technology and compare them.
+\subsection{Interpretation}
+Hotspot Analysis: Identify the largest emissions and key sources in each technology’s life cycle.\\[8pt]
+Compare these emissions with the comparator product.\\[8pt]
+Discuss potential ways to reduce environmental impacts (e.g., material changes, process optimizations, alternative energy sources).
 
 \newpage
 
@@ -483,6 +503,9 @@ The primary objective is to compare these power options to understand their impl
 \item GalaTent (2024). \textit{Emergency Medical Tents and Shelters}. [online] Available at: \url{https://www.galatent.co.uk/uses/emergency-medical-tents-and-shelters}.
 \item ICBrindle (2022). \textit{Rapid Deployment Inflatable Emergency Shelters}. [online] Available at: \url{https://icbrindle.com/rapid-response-inflatable-shelters/inflatable-emergency-shelters-tents.html}.
 \item Alves, B., (2014). \textit{Topic: Natural disasters}. [online] www.statista.com. Available at: \url{https://www.statista.com/topics/2155/natural-disasters/}
+\item Wikipedia (2025). \textit{Environmental impact assessment}. [online] Wikipedia. Available at: \url{https://en.wikipedia.org/wiki/Environmental_impact_assessment}.
+
+‌
 \end{enumerate}
 	
 \end{document}
