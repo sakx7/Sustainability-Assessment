@@ -28,8 +28,8 @@ Figure
 ### Perovskite Power Conversion Efficiency Development
 Figure
 
-- Ossila. (2025). *Highest Efficiency Perovskite Solar Cells*. [Online] Available at: [https://www.ossila.com/pages/highest-efficiency-perovskite-solar-cells](https://www.ossila.com/pages/highest-efficiency-perovskite-solar-cells)
-- Ansys.com. (2021). *Ansys Granta EduPack | Software for Materials Education*. [Online] Available at: [https://www.ansys.com/en-gb/products/materials/granta-edupack](https://www.ansys.com/en-gb/products/materials/granta-edupack)
+Ossila. (2025). *Highest Efficiency Perovskite Solar Cells*. [Online] Available at: [https://www.ossila.com/pages/highest-efficiency-perovskite-solar-cells](https://www.ossila.com/pages/highest-efficiency-perovskite-solar-cells)
+Ansys.com. (2021). *Ansys Granta EduPack | Software for Materials Education*. [Online] Available at: [https://www.ansys.com/en-gb/products/materials/granta-edupack](https://www.ansys.com/en-gb/products/materials/granta-edupack)
 
 ---
 
@@ -40,8 +40,7 @@ Figure
 - Manufacturing
 - Performance of the product
 
-
-- Staff, E. (2023). *Perovskite solar cells for vehicle-integrated*. Electric Motor Engineering. [Online] Available at: [https://www.electricmotorengineerin olar-cells-for-vehicle-integrated/](https://www.electricmotorengineerin olar-cells-for-vehicle-integrated/)
+Staff, E. (2023). *Perovskite solar cells for vehicle-integrated*. Electric Motor Engineering. [Online] Available at: [https://www.electricmotorengineerin olar-cells-for-vehicle-integrated/](https://www.electricmotorengineerin olar-cells-for-vehicle-integrated/)
 
 ---
 
