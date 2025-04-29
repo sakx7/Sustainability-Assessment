@@ -20,15 +20,15 @@ To conduct a sustainability assessment for a product of your choosing.
 
 ## 3. Select 4 sustainability indicators
 - Must include at least 1 from each category:
-  - Environmental
-  - Economic
-  - Social
+  - Environmental (a)
+  - Economic (b)
+  - Social (c & d)
 
 ## 4. Conduct sustainability assessment
 
 ### a. Environmental assessment (LCA methodology)
 - Use Life Cycle Assessment approach
-- Include ≥1 environmental indicator (preferably more)
+- Include 1 or more environmental indicator(s) (preferably more)
   - e.g., climate change, human toxicity, water footprint, acidification potential
 
 ### b. Define goal and scope

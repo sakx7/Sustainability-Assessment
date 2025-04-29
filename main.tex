@@ -379,6 +379,9 @@ top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=wa
 \titleformat{\subsection}[block]{\large}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}[block]{}{\thesubsubsection}{1em}{}
 
+
+\def\customhrule{\hrule\vspace{1em}\noindent}
+
 %\usepackage{darkmode}
 %\enabledarkmode
 
@@ -442,29 +445,80 @@ Sustainability Assessment of \textcolor{green!50!black}{Perovskite\\ Solar Cells
 
 This study conducts a comprehensive sustainability assessment of emergency shelter tents\footnote{An emergency shelter tent is a portable structure, often lightweight and easy to set up, designed to provide temporary protection from the elements in emergency situations. It offers a safe and sheltered space, especially in scenarios where traditional housing is unavailable or inadequate, as noted by Gala Tent (2024) and ICBrindle (2022)}, the focus is specifically on the technologies used and the energy systems that support them, with an emphasis on their environmental impact, economic feasibility, social consequences, and socio-environmental trade-offs.\\[8pt]	
 The frequency and magnitude of natural disasters around the world highlight the significance of sustainable emergency shelters. Each year, over 100 countries are affected, with more than 200 million people impacted and an estimated 20 to 40 million individuals requiring temporary shelters (Alves, B., 2014). As a \textcolor{red}{\textit{[engineering/design/sustainability]}} student, I am motivated by the challenge of balancing humanitarian\footnote{Concerned with or seeking to promote human welfare. \textit{"groups sending humanitarian aid"}} needs with environmental responsibility, due to the imminent danger of providing quick, efficient, and sustainable shelter during emergency situations i find the evaluation of emergency shelter technologies as highly relevant.\\[8pt]
-Three distinct power solutions come to mind:
-	\begin{itemize}
-		\item \textbf{Perovskite-integrated shelters}: The primary focus, representing an emerging technology with potential advantages in efficiency and manufacturing cost compared to conventional options.
-		\item \textbf{Silicon solar-equipped shelters}: Serving as the baseline renewable alternative, with established performance data and widespread deployment in field operations.
-		\item \textbf{Diesel generator systems}: Representing conventional power solutions for shelters in grid-independent scenarios, despite their known environmental drawbacks.
-	\end{itemize}
+Three types of power systems are considered in this study. The first is \textbf{perovskite}-integrated shelters, which are the main focus due to their potential as an emerging solar technology offering advantages in efficiency and lower manufacturing costs. The second is \textbf{silicon} solar-equipped shelters, a well-established renewable option with reliable performance data and proven use in field conditions. Lastly, \textbf{diesel} generator systems are included as a conventional off-grid solution, commonly used despite their significant environmental impact.\\[8pt]
+This mix of new and established technologies allows for a balanced comparison of their strengths, limitations, and trade-offs in the context of sustainable disaster response. The goal is to evaluate how each system performs in terms of environmental impact, practicality, and alignment with broader sustainability objectives.\\[8pt]
 This selection encompasses both mature and emerging technologies to provide a balanced perspective on sustainability trade-offs in disaster response applications.\\[8pt]
 The primary objective is to compare these power options to understand their implications for both sustainability goals and disaster relief efforts.
 
 \newpage
 \section{Environmental Assessment}
-
-Briefly introduce the concept of what an Environmental Assessment is.
-\begin{formal}[Wikipedia, 2025]{green!50!black}{white}
-	Environmental Impact Assessment (EIA) evaluates the environmental consequences of plans, policies, or projects before decisions are made. EIA applies to projects, while Strategic Environmental Assessment (SEA) applies to policies and plans. It is a tool for decision-making, often involving public participation and legal review. The goal is to ensure environmental impacts are considered before proceeding. The International Association for Impact Assessment (IAIA) defines EIA as identifying, predicting, evaluating, and mitigating the effects of development proposals before major decisions are made, requiring justification based on environmental studies and public input.
+Environmental assessment is the process of examining how a project or technology might affect the environment, helping to identify potential harm and guide more sustainable choices.
+\begin{formal}[Wikipedia, 2025]{green!50!black}{white} Environmental Impact Assessment (EIA) evaluates the environmental consequences of plans, policies, or projects before decisions are made. EIA applies to projects, while Strategic Environmental Assessment (SEA) applies to policies and plans. It is a tool for decision-making, often involving public participation and legal review. The goal is to ensure environmental impacts are considered before proceeding. The International Association for Impact Assessment (IAIA) defines EIA as identifying, predicting, evaluating, and mitigating the effects of development proposals before major decisions are made, requiring justification based on environmental studies and public input. 
 \end{formal}
-Relevance/Relation: Mention the importance of assessing environmental impacts for your chosen shelter technologies.
-\subsection{Selection of Environmental Indicator(s)}
-Define which environmental indicators you will be assessing (e.g., carbon emissions, energy use, water consumption).\\
-Justify why these indicators are relevant to your product comparison.
-\subsection{Goal and Scope Definition (LCA)}
-\textbf{Goal:} Explain the purpose of the environmental assessment. For example, “To compare the environmental impacts of perovskite-integrated shelters, silicon solar-equipped shelters, and diesel generators.”\\
-\textbf{Scope:} Define the boundaries of the assessment (e.g., cradle-to-grave or gate-to-gate, life cycle stages considered, cut-off points for data).
+In this environmental assessment, I aim to specifically consider the power solutions integrated into emergency shelter tents, as outlined earlier. The goal is to evaluate their environmental relevance within the context of sustainable deployment.
+
+\subsection{Selection of Environmental Indicator(s)}  
+For this environmental assessment, \textbf{CO$\bm{_2}$ emissions} will serve as the primary indicator to evaluate the environmental impact of said power solutions used in emergency shelter tents.
+\begin{enumerate}[itemsep=-1mm]
+	\item \textbf{Climate Relevance} – CO$_2$ is a major greenhouse gas, and its emissions directly contribute to global climate change. Assessing CO$_2$ emissions allows for a clear comparison of each power solution's environmental footprint.
+	\item \textbf{Applicability to Energy Systems} – The three power solutions (perovskite-integrated solar, silicon-based solar, and diesel generators) have varying carbon footprints, making CO$_2$ emissions a measurable and objective basis for comparison.
+	\item \textbf{Sustainability Prioritization} – Emergency shelters must address immediate needs while considering long-term environmental impacts. Lower CO$_2$ emissions align with global sustainability goals, making this indicator crucial for informed decision-making.
+\end{enumerate}
+By focusing on CO$_2$ emissions, this assessment provides a direct measure of how each energy system contributes to climate change, helping guide eco-conscious choices for shelter deployment.
+\subsection*{Study goal}
+The main goal of this assessment is to evaluate and compare the {CO$_2$ emissions} of three power solutions for emergency shelter tents, {Perovskite-integrated solar panels}, {Silicon-based solar panels} and {Diesel generators}. The carbon footprint will be assessed using the Life Cycle Assessment, LCA, methodology, as defined in the ISO 14040 [11] and ISO 14044 [12] standards.
+\subsection*{Delineation of System Boundaries}
+This assessment will comprehensively evaluate carbon dioxide (CO$_2$) emissions by examining three principal phases of the product life cycle:
+\begin{itemize}
+	\item \textbf{Manufacturing Phase}: This encompasses the complete production chain, including raw material extraction, processing, component fabrication, and final assembly of each power generation system. Special attention will be given to the energy-intensive manufacturing processes for photovoltaic materials (both perovskite and silicon variants) and the comparatively simpler production of diesel generators.\\[8pt]
+	Emissions generated during material extraction, production, and assembly are initially accounted for as part of the manufacturing phase. These emissions represent the initial carbon footprint of the product. The amount and quality of these emissions are influenced by various factors, such as the type of materials used (machines), production methods, and the efficiency of the manufacturing processes. While this phase is critical, the full impact of these emissions will only be fully understood when considering them alongside operational and end-of-life emissions as part of the overall life cycle assessment.
+	\item \textbf{Operational Phase}: Then the analysis will focus on emissions generated during actual energy production when the systems are deployed in field conditions. This phase represents the most critical differentiation point between renewable solar technologies and fossil-fuel-dependent generators.\\[8pt]
+	Operational emissions—such as fuel combustion—are integrated over the entire period of system use, rather than arbitrarily sampled from a single year. This captures long-term behavior and trends leaning towards end-of-life.\\[8pt]	
+	\textit{Solar panels} typically have negligible operational emissions. \textit{Diesel generators}, on the other hand, emit CO\textsubscript{2} continuously during use. To accurately compare such technologies, their emission trends must be fully represented.  
+	\item \textbf{End-of-Life Phase}: Wherever reliable data exists, consideration will be given to disposal processes, potential recycling opportunities, and the environmental implications of decommissioning each technology.\\[8pt]
+	Emissions from system disposal, recycling, and decommissioning are included and likewise distributed over total lifetime energy output. These processes may introduce additional environmental costs that should not be ignored.
+\end{itemize}
+\textit{Excluded Considerations}: Transportation logistics have been deliberately omitted from this assessment due to the highly variable nature of emergency deployment scenarios, which could disproportionately skew results without providing meaningful comparative insights. Also routine maintenance emissions are considered negligible when compared to the dominant operational phase impacts, particularly for the solar technologies which require minimal ongoing intervention.
+
+\subsection*{Clarified Functional Unit Definition}
+
+The functional unit for this assessment is:  
+\begin{quote}
+	\textit{Kilograms of CO\textsubscript{2} emitted per kilowatt-hour (kWh) of usable energy delivered over the full system lifetime, including emissions from manufacturing, total operational use, and end-of-life processes.}
+\end{quote}
+\vspace{1em}
+\begin{equation}
+\text{Emission Intensity}\ (\text{CO}_2/\text{kWh}) =\frac{\text{Total  CO}_2}{\text{Total Usable Energy Output}\ \text{(kWh)}}
+\label{normalco}
+\end{equation}
+\subsubsection*{Why This Normalized Approach Is Necessary}
+This comparative assessment requires a comprehensive evaluation framework that accounts for temporal variations in emission profiles across different energy systems. The normalized approach serves three essential purposes:\\
+First, it rectifies the inherent imbalance created by short-term analyses. Fossil-dependent systems like diesel generators exhibit continuous emission curves - their climate impact accumulates steadily with each operational hour. In contrast, photovoltaic systems concentrate their emissions primarily in the manufacturing phase, followed by decades of carbon-neutral operation. A single-year snapshot would systematically disadvantage renewable solutions while underrepresenting the persistent emissions of combustion-based alternatives. Second, this methodology properly weights the relationship between initial carbon investment and long-term energy returns. The manufacturing emissions of solar technologies represent a one-time environmental cost that is gradually offset through clean energy production. Without lifecycle normalization, this crucial dynamic becomes obscured, potentially leading to flawed comparisons that favor systems with lower upfront but higher recurring emissions.\\
+Third, the approach acknowledges the time-value of emissions. From a climate perspective, earlier emissions have more significant cumulative impact due to atmospheric residence times and compounding warming effects. By examining complete lifecycles, we can properly assess whether upfront emissions (as with solar) are justified by subsequent decades of clean generation, compared to systems that perpetually emit greenhouse gases.\\[8pt]
+This rigorous framework ensures equitable comparison by:
+\begin{itemize}[itemsep=-1mm]
+	\item Accounting for all emission phases (manufacturing, operation, decommissioning)
+	\item  Properly amortizing initial carbon costs over total energy production
+	\item Revealing how emission intensity evolves throughout system  lifetimes
+	\item  Providing decision-makers with complete environmental accounting
+\end{itemize}
+The resulting analysis offers meaningful insights unavailable through partial or truncated assessment windows, supporting evidence-based selection of sustainable energy solutions for emergency response scenarios.
+
+
+\subsubsection*{Revised Functional Unit Statement}
+\begin{quote}
+	\textit{The functional unit is defined as kilograms of CO\textsubscript{2} emitted per kilowatt-hour of usable energy delivered over the system's full operational lifetime. This value incorporates emissions from manufacturing, ongoing operation, and end-of-life, normalized by total energy output, enabling consistent and fair comparison across technologies with different emission profiles and lifespans.}
+\end{quote}
+
+
+\subsection{Framework for Comparative Analysis}
+This framework enables a robust, multi-dimensional comparison of the three power solutions, integrating technical metrics and life cycle considerations across multiple datasets:
+\begin{itemize}[itemsep=-1mm]
+	\item \textbf{Individual Emissions Intensities}: Evaluation of each system's emissions across distinct life cycle stages, allowing identification of stage-specific hotspots.
+	\item \textbf{Absolute Emissions Intensity}: Calculation of total CO\textsubscript{2} emissions per kilowatt-hour (kWh) of usable energy delivered, offering a direct measure of environmental impact over the full system life.
+\end{itemize}
+The analysis draws on multiple datasets, applying statistical methods—including averaging, variance analysis, and uncertainty quantification—to ensure that results are both rigorous and representative. This comprehensive dataset will form the basis for a fair, evidence-based comparison of the energy solutions under consideration.
+
 \subsection{Inventory Data Collection}
 Discuss the data collected for each product’s life cycle stages (production, use, disposal).\\
 Include information on environmental inputs/outputs, energy requirements, and waste.\\
@@ -505,6 +559,9 @@ Discuss potential ways to reduce environmental impacts (e.g., material changes, 
 \item Alves, B., (2014). \textit{Topic: Natural disasters}. [online] www.statista.com. Available at: \url{https://www.statista.com/topics/2155/natural-disasters/}
 \item Wikipedia (2025). \textit{Environmental impact assessment}. [online] Wikipedia. Available at: \url{https://en.wikipedia.org/wiki/Environmental_impact_assessment}.
 
+\newpage
+
+\section{Appendix}
 ‌
 \end{enumerate}
 	
