@@ -16,11 +16,10 @@
 \newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
 \usepackage{subcaption}
 
-
-
-%\usepackage{times}
+\usepackage{parskip}
+\usepackage{times}
 %\usepackage{mathpazo}
-\usepackage{tgtermes}
+%\usepackage{tgtermes}
 
 \DeclareSIUnit{\atm}{atm}
 
@@ -379,7 +378,6 @@ top color=watercol!90!black!90,bottom color=watercol!90!black!90,middle color=wa
 \titleformat{\subsection}[block]{\large}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}[block]{}{\thesubsubsection}{1em}{}
 
-
 \def\customhrule{\hrule\vspace{1em}\noindent}
 
 %\usepackage{darkmode}
@@ -465,9 +463,9 @@ For this environmental assessment, \textbf{CO$\bm{_2}$ emissions} will serve as 
 	\item \textbf{Sustainability Prioritization} – Emergency shelters must address immediate needs while considering long-term environmental impacts. Lower CO$_2$ emissions align with global sustainability goals, making this indicator crucial for informed decision-making.
 \end{enumerate}
 By focusing on CO$_2$ emissions, this assessment provides a direct measure of how each energy system contributes to climate change, helping guide eco-conscious choices for shelter deployment.
-\subsection*{Study goal}
-The main goal of this assessment is to evaluate and compare the {CO$_2$ emissions} of three power solutions for emergency shelter tents, {Perovskite-integrated solar panels}, {Silicon-based solar panels} and {Diesel generators}. The carbon footprint will be assessed using the Life Cycle Assessment, LCA, methodology, as defined in the ISO 14040 [11] and ISO 14044 [12] standards.
-\subsection*{Delineation of System Boundaries}
+\subsection{Study goal}
+The main goal of this assessment is to evaluate and compare the {CO$_2$ emissions} of three power solutions for emergency shelter tents, {Perovskite-integrated solar panels}, {Silicon-based solar panels} and {Diesel generators}. The carbon footprint will be assessed using the Life Cycle Assessment, LCA, methodology, as defined in the ISO 14040 and ISO 14044 standards.
+\subsection{Delineation of System Boundaries}
 This assessment will comprehensively evaluate carbon dioxide (CO$_2$) emissions by examining three principal phases of the product life cycle:
 \begin{itemize}
 	\item \textbf{Manufacturing Phase}: This encompasses the complete production chain, including raw material extraction, processing, component fabrication, and final assembly of each power generation system. Special attention will be given to the energy-intensive manufacturing processes for photovoltaic materials (both perovskite and silicon variants) and the comparatively simpler production of diesel generators.\\[8pt]
@@ -480,36 +478,23 @@ This assessment will comprehensively evaluate carbon dioxide (CO$_2$) emissions 
 \end{itemize}
 \textit{Excluded Considerations}: Transportation logistics have been deliberately omitted from this assessment due to the highly variable nature of emergency deployment scenarios, which could disproportionately skew results without providing meaningful comparative insights. Also routine maintenance emissions are considered negligible when compared to the dominant operational phase impacts, particularly for the solar technologies which require minimal ongoing intervention.
 
-\subsection*{Clarified Functional Unit Definition}
+\subsection{Functional Unit}
 
 The functional unit for this assessment is:  
 \begin{quote}
-	\textit{Kilograms of CO\textsubscript{2} emitted per kilowatt-hour (kWh) of usable energy delivered over the full system lifetime, including emissions from manufacturing, total operational use, and end-of-life processes.}
+	\textit{The functional unit is defined as kilograms of CO\textsubscript{2} emitted per kilowatt-hour of usable energy delivered over the system's said operational lifetime. This value normalizes the total energy output, enabling consistent and fair comparison across technologies with different emission profiles and lifespans.}
 \end{quote}
 \vspace{1em}
 \begin{equation}
-\text{Emission Intensity}\ (\text{CO}_2/\text{kWh}) =\frac{\text{Total  CO}_2}{\text{Total Usable Energy Output}\ \text{(kWh)}}
+\text{Carbon Emission Intensity}\ (\text{CO}_2/\text{kWh}) =\frac{\text{Total  CO}_2}{\text{Total Usable Energy Output}\ \text{(kWh)}}
 \label{normalco}
 \end{equation}
-\subsubsection*{Why This Normalized Approach Is Necessary}
-This comparative assessment requires a comprehensive evaluation framework that accounts for temporal variations in emission profiles across different energy systems. The normalized approach serves three essential purposes:\\
-First, it rectifies the inherent imbalance created by short-term analyses. Fossil-dependent systems like diesel generators exhibit continuous emission curves - their climate impact accumulates steadily with each operational hour. In contrast, photovoltaic systems concentrate their emissions primarily in the manufacturing phase, followed by decades of carbon-neutral operation. A single-year snapshot would systematically disadvantage renewable solutions while underrepresenting the persistent emissions of combustion-based alternatives. Second, this methodology properly weights the relationship between initial carbon investment and long-term energy returns. The manufacturing emissions of solar technologies represent a one-time environmental cost that is gradually offset through clean energy production. Without lifecycle normalization, this crucial dynamic becomes obscured, potentially leading to flawed comparisons that favor systems with lower upfront but higher recurring emissions.\\
-Third, the approach acknowledges the time-value of emissions. From a climate perspective, earlier emissions have more significant cumulative impact due to atmospheric residence times and compounding warming effects. By examining complete lifecycles, we can properly assess whether upfront emissions (as with solar) are justified by subsequent decades of clean generation, compared to systems that perpetually emit greenhouse gases.\\[8pt]
-This rigorous framework ensures equitable comparison by:
-\begin{itemize}[itemsep=-1mm]
-	\item Accounting for all emission phases (manufacturing, operation, decommissioning)
-	\item  Properly amortizing initial carbon costs over total energy production
-	\item Revealing how emission intensity evolves throughout system  lifetimes
-	\item  Providing decision-makers with complete environmental accounting
-\end{itemize}
+{\textbf{Why This Normalized Approach Is Necessary}}\\[8pt]
+I aim for an approach that takes into account how emissions change over time, in order to evaluate energy systems objectively  three primary benefits of the normalized approach are as follows:\\[8pt]
+One, it corrects the bias of short-term research. Diesel engines produce emissions continuously when running, while solar panels produce most during manufacture but run cleanly afterwards. A snapshot over a one-year period would be unfairly skewed towards fossil fuels and ignore their own long-term pollution.\\[8pt]
+Second, it shows the trade-off between up-front emissions and long-term energy generation. The carbon cost of making solar panels is a upfront expense, paid back over decades of clean energy. Without lifecycle analysis, this trade-off is hidden, and systems with low up-front emissions but high recurring ones may look better than they do.\\[8pt]
+Third, it considers when the emissions occur. Emitting carbon early creates a more lasting impact because it stays in the air and adds to long-term heating. Analysis of the whole lifecycle enables us to see whether or not early emissions (like for solar) are balanced out by decades of pollution-free energy, compared to systems that keep polluting.\\[8pt]
 The resulting analysis offers meaningful insights unavailable through partial or truncated assessment windows, supporting evidence-based selection of sustainable energy solutions for emergency response scenarios.
-
-
-\subsubsection*{Revised Functional Unit Statement}
-\begin{quote}
-	\textit{The functional unit is defined as kilograms of CO\textsubscript{2} emitted per kilowatt-hour of usable energy delivered over the system's full operational lifetime. This value incorporates emissions from manufacturing, ongoing operation, and end-of-life, normalized by total energy output, enabling consistent and fair comparison across technologies with different emission profiles and lifespans.}
-\end{quote}
-
 
 \subsection{Framework for Comparative Analysis}
 This framework enables a robust, multi-dimensional comparison of the three power solutions, integrating technical metrics and life cycle considerations across multiple datasets:
@@ -520,9 +505,159 @@ This framework enables a robust, multi-dimensional comparison of the three power
 The analysis draws on multiple datasets, applying statistical methods—including averaging, variance analysis, and uncertainty quantification—to ensure that results are both rigorous and representative. This comprehensive dataset will form the basis for a fair, evidence-based comparison of the energy solutions under consideration.
 
 \subsection{Inventory Data Collection}
-Discuss the data collected for each product’s life cycle stages (production, use, disposal).\\
-Include information on environmental inputs/outputs, energy requirements, and waste.\\
-Mention data sources, assumptions, and limitations where applicable.
+%Discuss the data collected for each product’s life cycle stages (production, use, disposal).\\
+%Include information on environmental inputs/outputs, energy requirements, and waste.\\
+%Mention data sources, assumptions, and limitations where applicable.
+\begin{tcolorbox}[title={\subsubsection{Manufacturing Phase}\vspace{-1em}}, colback=white, colframe=green!50!black, boxrule=0.4mm, width=1\textwidth]
+\textcolor{green!50!black}{\textbf{Perovskite Solar Cells (PSCs):}} 
+The study evaluates \textit{mesoscopic PSCs} (8.7\% efficiency, $8\times8$ cm\textsuperscript{2} modules) at \textbf{32.88 kg CO\textsubscript{2}-eq per module}, with 98\% of emissions tied to gold electrode deposition. The mesoporous layer deposition alone consumes 32.55 kWh/module, making it the most energy-intensive step due to high-temperature processing (Carneiro et al., 2022). \\[8pt]
+At the \textit{industrial scale}, if gold is replaced with carbon-based electrodes, emissions could drop by $\sim$98\% per module. Similarly, switching to renewable energy for manufacturing reduces the footprint by 32.8\% (Carneiro et al., 2022). However, at the present time, these improvements have \textbf{not yet been implemented widely}, and the manufacturing process is still relatively carbon-intensive. \\[8pt]
+\textcolor{green!50!black}{\textbf{Silicon Solar Panels:}} 
+The analysis examines \textit{monocrystalline silicon PV} (18-22\% efficiency, standard 1.6 m\textsuperscript{2} modules) with manufacturing emissions of \textbf{33-72 kg CO\textsubscript{2}-eq per module} (InfoLink Consulting, 2025). The polysilicon purification stage dominates energy use, requiring 1,500-2,000\textdegree C furnaces consuming 80-100 kWh/module, primarily powered by coal in China . Silver electrode deposition contributes 15-20\% of total emissions due to high embodied carbon (6-8g Ag/module) from mining processes (Solaris Renewables, 2022). \\[8pt]
+At the \textit{industrial scale}, adoption of fluidized bed reactor (FBR) polysilicon could reduce refining emissions by 40-50\% per module. Switching to renewable-powered factories decreases the footprint by $\sim$50\% , while recycling silicon/glass cuts virgin material needs by 30\% (InfoLink Consulting, 2025). \\[8pt]
+\textcolor{green!50!black}{\textbf{Diesel Generators:}}
+The analysis examines \textit{industrial diesel generators} (100-500 kW capacity) with manufacturing emissions of \textbf{1,500-2,500 kg CO\textsubscript{2}-eq per unit}, primarily from cast iron engine blocks (500-700 kg) and copper windings (50-80 kg). The casting process dominates energy use, requiring 800-1,200 kWh per unit through coal-powered electric arc furnaces operating at 1,500°C (Babanohammadi et al., 2025). Metal machining contributes 20-25\% of total emissions due to cutting fluid production and disposal. \\[8pt]
+At the \textit{industrial scale}, replacing cast iron with aluminum alloys could reduce engine block emissions by 30-40\% per unit. Similarly, switching to renewable-powered foundries decreases the footprint by 35-50\% (Babanohammadi et al., 2025). However, these improvements face \textbf{significant cost barriers}, with aluminum designs currently 20\% more expensive than conventional iron.
+\end{tcolorbox}
+\paragraph{Calculations of Carbon Intensity During Production}\mbox{}\\[6pt]
+By contrasting the {carbon emissions} linked to the {production energy}, I now describe the {emission intensity of the manufacturing process}.\\
+
+\vspace*{1em}
+
+
+\begin{minipage}{0.55\textwidth}
+\Large
+{1. Perovskite Solar Cells (PSCs)}\\[8pt]
+\normalsize
+The carbon intensity of PSC manufacturing is determined by:\\[-4pt]
+\begin{itemize}[itemsep=2mm]
+	\item \textbf{Manufacturing emissions}: 32.88 kg CO$_2$/module (8$\times$8 cm$^2$)
+	\item \textbf{Production energy}: 32.55 kWh/module (98\% from gold electrode deposition)
+\end{itemize}
+\end{minipage}\hfil
+\begin{minipage}{0.5\textwidth}\centering
+\hspace{-1em}\wm{1}{Carbon intensity per production energy:}
+\[\frac{32.88\,\text{kg CO}_2}{32.55\,\text{kWh}} = {1.01\,\text{kg CO}_2/\text{kWh}}\]
+\end{minipage}\\
+
+\vspace*{\fill}
+
+\begin{minipage}{0.55\textwidth}
+	\Large
+	{2. Silicon Solar Panels}\\[8pt]
+	\normalsize
+	For monocrystalline silicon PV (1.6 m$^2$ modules):\\[-4pt]
+	\begin{itemize}[itemsep=2mm]
+		\item \textbf{Manufacturing emissions}: 52.5 kg CO$_2$/module\footnotemark
+		\item \textbf{Production energy}: 90 kWh/module (80\% from polysilicon purification)
+	\end{itemize}
+\end{minipage}\hfil
+\begin{minipage}{0.5\textwidth}\centering
+	\hspace{-1em}\wm{1}{Carbon intensity per production energy:}
+	\[\frac{52.5\,\text{kg CO}_2}{90\,\text{kWh}} = {0.58\,\text{kg CO}_2/\text{kWh}}\]
+\end{minipage}\\
+
+\vspace*{\fill}
+
+\footnotetext{Emissions and energy values are based on averaged or mid-range estimates; values may vary with supply chain energy mix and material origin.}
+
+
+\newpage
+
+\vspace{1em}
+
+\begin{minipage}{0.55\textwidth}
+	\Large
+	{3. Diesel Generators}\\[8pt]
+	\normalsize
+	For 100 kW industrial diesel generators:\\[-4pt]
+	\begin{itemize}[itemsep=2mm]
+		\item \textbf{Manufacturing emissions}: 2000 kg CO$_2$/unit
+		\item \textbf{Production energy}: 1000 kWh/unit (50\% from metal casting)
+	\end{itemize}
+\end{minipage}\hfil
+\begin{minipage}{0.5\textwidth}\centering
+	\hspace{-1em}\wm{1}{Carbon intensity per production energy:}
+	\[\frac{2000\,\text{kg CO}_2}{1000\,\text{kWh}} = {2.0\,\text{kg CO}_2/\text{kWh}}\]
+\end{minipage}\\
+\vspace{1.4em}
+\begin{center}
+	\begin{tblr}{
+			colspec={Q[3cm]Q[4cm]Q[4cm]Q[4cm]},
+			hlines={1.1pt}, vlines={1.1pt},
+			cells={valign=m, halign=c},
+			rows={ht=3\baselineskip},
+			row{1}={ht=1\baselineskip, font=\bfseries},
+		}
+		& Perovskite Solar Cells & Silicon Solar Panels & Diesel Generators \\
+		Manufacturing Emissions & 32.88 kg CO\textsubscript{2}-eq/module (8$\times$8 cm\textsuperscript{2}) & 52.5 kg CO\textsubscript{2}-eq/module (1.6 m\textsuperscript{2}) & {2000 kg CO\textsubscript{2}-eq/unit\\ (100 kW)}\\
+		Carbon Intensity per Production Energy & 1.01 kg CO\textsubscript{2}-eq/kWh & 0.58 kg CO\textsubscript{2}-eq/kWh & 2.0 kg CO\textsubscript{2}-eq/kWh \\
+	\end{tblr}
+	\captionof{table}{Comparison of Carbon Intensity Metrics for Energy Technologies}
+\end{center}
+\vspace{0.1em}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			ybar,
+			bar width=0.6cm,
+			width=10cm,
+			height=7cm,
+			ymin=0,
+			ymax=2.5,
+			ylabel={Carbon Intensity (kg CO\textsubscript{2}-eq/kWh)},
+			symbolic x coords={Perovskite, Silicon, Diesel},
+			xtick=data,
+%			nodes near coords,
+%			nodes near coords align={vertical},
+%			every node near coord/.style={font=\small},
+			enlarge x limits=0.3,
+			ymajorgrids=true,
+			legend style={at={(0.5,-0.2)},anchor=north},
+			ytick={0,0.5,1.0,1.5,2.0,2.5},
+			]
+			
+			\addplot[fill=green!50, draw=green!70!black] 
+			coordinates {
+				(Perovskite,1.01)
+				(Silicon,0.58)
+				(Diesel,2.0)
+			};
+			
+			\legend{Carbon Intensity per Production Energy}
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Comparison of Carbon Intensity per Production Energy for Different Energy Technologies}
+	\label{fig:carbon_intensity}
+\end{figure}
+\vspace{-1em}
+\textit{This graph is the streamlined table data it is to be added upon as we discuss more phases of the life cycle.}
+
+\paragraph{Conclusion of findings}\mbox{}\\[-6pt]\noindent
+
+text...
+
+\newpage
+
+\begin{tcolorbox}[title={\subsubsection{Operational Phase}\vspace{-1em}}, colback=white, colframe=green!50!black, boxrule=1mm, width=1\textwidth]
+
+\end{tcolorbox}
+
+
+For perovskite-integrated, silicon-solar, diesel
+i did for manufacture phase, operation phase and end-of-life:
+1. outlined a collected data
+2. possible calcs
+3. table of findings from data and calcs
+4. graph of the table
+5. other relevant graphs
+6. Conclusion of findings
+After i do this i make a colection of the cylce data and do combine data like graphs then make on overall  Estimating of total emissions (impact assessment) and then Conclusion of findings and identify largest emissions and key sources (hotspot analysis)	
+
+
+
+
 \subsection{Impact Assessment}
 Explain how emissions and other environmental impacts are assessed and quantified.\\
 Use tools like CO2 equivalents to estimate climate change impacts.\\
@@ -556,13 +691,18 @@ Discuss potential ways to reduce environmental impacts (e.g., material changes, 
 \begin{enumerate}
 \item GalaTent (2024). \textit{Emergency Medical Tents and Shelters}. [online] Available at: \url{https://www.galatent.co.uk/uses/emergency-medical-tents-and-shelters}.
 \item ICBrindle (2022). \textit{Rapid Deployment Inflatable Emergency Shelters}. [online] Available at: \url{https://icbrindle.com/rapid-response-inflatable-shelters/inflatable-emergency-shelters-tents.html}.
-\item Alves, B., (2014). \textit{Topic: Natural disasters}. [online] www.statista.com. Available at: \url{https://www.statista.com/topics/2155/natural-disasters/}
+\item Alves, B., (2014). \textit{Topic: Natural disasters}. [online] Statista. Available at: \url{https://www.statista.com/topics/2155/natural-disasters/}
 \item Wikipedia (2025). \textit{Environmental impact assessment}. [online] Wikipedia. Available at: \url{https://en.wikipedia.org/wiki/Environmental_impact_assessment}.
+\item Lee, K.-M., \& Inaba, A. (2006). \textit{Life Cycle Assessment: Best Practices of ISO 14040 Series}. [online] ISO. Available at: \url{https://www.apec.org/docs/default-source/Publications/2004/2/Life-Cycle-Assessment-Best-Practices-of-International-Organization-for-Standardization-ISO-14040-Ser/04_cti_scsc_lca_rev.pdf}
+\item ISO/TC 207 Technical Committee (2006). \textit{ISO 14044: Environmental Management — Life Cycle Assessment — Requirements and Guidelines}. [online] ISO. Available at: \url{https://cdn.standards.iteh.ai/samples/38498/17324bfe9ec44e27a2f84e1a8ac3ca26/ISO-14044-2006.pdf}
+\item Carneiro, A.L., Martins, A.A., Duarte, V.C.M., Mata, T.M. and Andrade, L. (2022). \textit{Energy consumption and carbon footprint of perovskite solar cells}. [online] ScienceDirect. Available at:  \url{https://www.sciencedirect.com/science/article/pii/S2352484722000452}.
+‌\item InfoLink Consulting (2025). \textit{Understanding the Carbon Footprint of Solar Panel Manufacturing: A Sustainable Perspective}. [online] Infolink-group. Available at: \url{https://www.infolink-group.com/energy-article/Carbon-Footprint-of-Solar-Panel-Manufacturing}.
+\item Solaris Renewables (2022). \textit{What Is the Carbon Footprint of Solar Panel Manufacturing? [online] Solaris Renewables}. Available at: \url{https://solarisrenewables.com/blog/what-is-the-carbon-footprint-of-solar-panel-manufacturing/}.
+\end{enumerate}
 
 \newpage
 
 \section{Appendix}
-‌
-\end{enumerate}
+
 	
 \end{document}
